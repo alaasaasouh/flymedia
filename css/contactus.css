@@ -1,0 +1,141 @@
+/* Font Awesome */
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+/* Body Styles */
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #000000 27%, #000000 100%);
+  background-size: cover;
+}
+
+/* Keyframes for Slides */
+@keyframes slide1 {
+  0% {
+    background-image: url('../images/rrr.png');
+    object-position: cover;
+  }
+  33.33% {
+    background-image: url('../images/rrr3.jpeg');
+  }
+  66.66% {
+    background-image: url('../images/rrr.png');
+  }
+  100% {
+    background-image: url('../images/rrr3.jpeg');
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    background-image: url('../images/rrr.png');
+  }
+  33.33% {
+    background-image: url('../images/rrr3.jpeg');
+  }
+  66.66% {
+    background-image: url('../images/rrr.png');
+  }
+  100% {
+    background-image: url('../images/rrr3.jpeg');
+  }
+}
+
+@keyframes slide3 {
+  0% {
+    background-image: url('../images/rrr.png');
+  }
+  33.33% {
+    background-image: url('../images/rrr3.jpeg');
+  }
+  66.66% {
+    background-image: url('../images/rrr.png');
+  }
+  100% {
+    background-image: url('../images/rrr3.jpeg');
+  }
+}
+
+/* Hover Animation */
+body:hover {
+  animation: slide1 9s infinite;
+} 
+
+body:hover {
+  animation: slide2 9s infinite;
+}
+s
+body:hover {
+  animation: slide3 9s infinite;
+}
+
+/* Neumorphic Button Styles */
+button.neumorphic {
+  container-type: inline-size;
+  aspect-ratio: 1/1;
+  border: 0.5rem solid transparent;
+  border-radius: 2rem;
+  color: hsl(0 0% 10%);
+  background: none;
+  display: grid;
+  place-content: center;
+  gap: 0.5rem;
+  --shadow: 
+    -.5rem -.5rem 1rem hsla(182, 78%, 12%, 0.75),
+    .5rem .5rem 1rem hsl(0 0% 50% / .5);
+  box-shadow: var(--shadow);
+  outline: none;  
+  transition: all 0.1s;
+
+
+}
+
+button.neumorphic:hover, 
+button.neumorphic:focus-visible {
+  color: hsl(204, 66%, 52%);
+  scale: 1.1;
+}
+
+button.neumorphic:active, 
+button.neumorphic.active {
+  box-shadow:
+    var(--shadow),
+    inset .5rem .5rem 1rem hsla(0, 65%, 34%, 0.5),
+    inset -.5rem -.5rem 1rem hsla(0, 67%, 41%, 0.75);
+  color: hsl(194, 79%, 54%);
+  i { font-size: 28cqi};
+  span { font-size: 13cqi};
+}
+
+button.neumorphic i {
+  font-size: 31cqi;
+}
+
+button.neumorphic span {
+  font-family: system-ui, sans-serif;
+  font-size: 16cqi;
+}
+
+/* Main Content Styles */
+.cd__main {
+  background-color: #2144a5 !important;
+  padding: 2rem;
+}
+
+/* Heading Styles */
+h1 {
+  text-align: center;
+  color: hsl(167, 82%, 67%);
+  font-family: system-ui, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+/* Buttons Container Styles */
+.buttons {
+  display: grid;
+  width: min(75rem, 100%);
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
+  gap: 2rem;
+}
